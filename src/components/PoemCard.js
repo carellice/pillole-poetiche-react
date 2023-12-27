@@ -18,11 +18,11 @@ const PoemCard = ({ title, poem, author }) => {
       setSaved(false);
     }, 2000);
     if (title === "") {
-      const toCopy = [poem, "\n", "-", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
+      const toCopy = [poem, "\n", "- ", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
       console.log("copy poem -> toCopy: ", toCopy);
       PoemUtils.copyToClipboard(toCopy);
     } else {
-      const toCopy = [title, "\n", poem, "\n", "-", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
+      const toCopy = [title, "\n", poem, "\n", "- ", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
       console.log("copy poem -> toCopy: ", toCopy);
       PoemUtils.copyToClipboard(toCopy);
     }
