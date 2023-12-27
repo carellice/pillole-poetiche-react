@@ -1,17 +1,36 @@
-import React from 'react';
-import { Paper, Typography, useMediaQuery } from '@mui/material';
+import React, { useState } from 'react';
+import { Grid, IconButton, Paper, Snackbar, Typography, useMediaQuery } from '@mui/material';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CheckIcon from '@mui/icons-material/Check';
+import * as PoemUtils from "./../utils/PoemUtils";
 
 const PoemCard = ({ title, poem, author }) => {
+
+  const [saved, setSaved] = useState(false);
+
+  const copyPoem = () => {
+    setSaved(true);
+    setTimeout(() => {
+      setSaved(false);
+    }, 2000);
+    if (title === "") {
+      const toCopy = [poem, "\n", "-", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
+      PoemUtils.copyToClipboard(toCopy);
+    } else {
+      const toCopy = [title, "\n", poem, "\n", "-", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
+      PoemUtils.copyToClipboard(toCopy);
+    }
+  }
+
   const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
     <Paper
       style={{
         padding: 20,
-        margin: 20,
         background: '#f9f7f1',
         maxWidth: isMobile ? '100%' : '800px',
-        margin: 'auto',
+        margin: isMobile ? 20 : 'auto',
       }}
     >
       {title && (
@@ -25,6 +44,11 @@ const PoemCard = ({ title, poem, author }) => {
       <Typography variant="caption" style={{ fontFamily: 'Caveat', fontSize: '1.2rem', color: 'black' }}>
         - {author}
       </Typography>
+      <Grid container justifyContent="flex-end">
+        <IconButton style={{ color: 'black' }} onClick={copyPoem} aria-label="copy poem">
+          {saved ? <CheckIcon /> : <ContentCopyIcon />}
+        </IconButton>
+      </Grid>
     </Paper>
   );
 }

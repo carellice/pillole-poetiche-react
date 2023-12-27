@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import './App.css';
-import { Typography } from '@mui/material';
+import { Button, Snackbar, Typography } from '@mui/material';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,6 +10,12 @@ import PoemCarousel from './components/PoemCarousel';
 import * as PoemUtils from "./utils/PoemUtils";
 import AuthorList from './components/AuthorList';
 import AuthorDialog from './components/AuthorDialog';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+
 
 function App() {
   const darkTheme = createTheme({
@@ -38,13 +44,13 @@ function App() {
         <CssBaseline />
         <ResponsiveAppBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '20px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
+        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '100px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
           Poesia casuale
         </Typography>
         <PoemCard author={randomPoem.author} poem={randomPoem.poem} title={randomPoem.title} />
       
         <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
-          Scorri le posie
+          Scorri le poesie
         </Typography>
         <PoemCarousel poems={PoemUtils.getRandomizedPoems()}/>
 

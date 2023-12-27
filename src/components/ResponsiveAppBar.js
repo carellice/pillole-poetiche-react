@@ -5,7 +5,7 @@ import BookIcon from '@mui/icons-material/Book';
 
 const ResponsiveAppBar = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu">
           <BookIcon />
