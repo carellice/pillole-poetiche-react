@@ -278,16 +278,6 @@ export const getNumberOfPoemsByAuthor = (author) => {
 }
 
 export const copyToClipboard = (text) => {
-    // Crea un elemento textarea
-    const textarea = document.createElement('textarea');
-    // Imposta il testo da copiare
-    textarea.value = text;
-    // Aggiungi l'elemento textarea al DOM
-    document.body.appendChild(textarea);
-    // Seleziona il testo nell'elemento textarea
-    textarea.select();
-    // Copia il testo negli appunti
-    document.execCommand('copy');
-    // Rimuovi l'elemento textarea dal DOM
-    document.body.removeChild(textarea);
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(text);
 };

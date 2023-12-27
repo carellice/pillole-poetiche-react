@@ -9,15 +9,21 @@ const PoemCard = ({ title, poem, author }) => {
   const [saved, setSaved] = useState(false);
 
   const copyPoem = () => {
+    console.log("copy poem");
+    console.log("copy poem -> author: ", author);
+    console.log("copy poem -> poem: ", poem);
+    console.log("copy poem -> title: ", title);
     setSaved(true);
     setTimeout(() => {
       setSaved(false);
     }, 2000);
     if (title === "") {
       const toCopy = [poem, "\n", "-", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
+      console.log("copy poem -> toCopy: ", toCopy);
       PoemUtils.copyToClipboard(toCopy);
     } else {
       const toCopy = [title, "\n", poem, "\n", "-", author, "\n", "\n", "https://pillolepoetiche.netlify.app/"].join("");
+      console.log("copy poem -> toCopy: ", toCopy);
       PoemUtils.copyToClipboard(toCopy);
     }
   }
