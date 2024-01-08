@@ -252,6 +252,151 @@ export const poems = [
         poem: "Purtroppo ormai c'è questa mentalità così fastidiosamente diffusa per cui \"semplice\" significhi di scarso valore, mentre \"complesso\" voglia dire prezioso. Non c'è niente di più falso. Le cose migliori della vita non sono complicate, anzi. Sono semplici.",
         author: AuthorUtils.GIANLUCA_GOTTO
     },
+    {
+        title: "",
+        poem: "Fai il meglio che puoi, con quello che hai, nel posto in cui sei.",
+        author: AuthorUtils.ROOSEVELT
+    },
+    {
+        title: "Saro' con te.",
+        poem: "Ti mandero' un bacio con il vento, affidandolo alle sue dolci carezze. Nel sussurro dell'aria, porterà il mio amore verso di te. Anche se non mi vedrai, saprai che sarò lì, sempre accanto a te.",
+        author: AuthorUtils.SOFIA_J_ROSS
+    },
+    {
+        title: "MANUALE DELL'AMORE",
+        poem: "Un giorno incontri una persona, che può essere quando meno te lo aspetti, quando non cercavi niente, essa semplicemente appare e ti stravolge la vita.",
+        author: AuthorUtils.ANIMA_DI_VENERE
+    },
+    {
+        title: "Nonostante tutto...",
+        poem: "Quando ti sentirai triste, nervosa, esausta, quando ci saranno giorni no... tu chiamami, non importa in che rapporti siamo, se ci odiamo, se ci amiamo, se ci vogliamo male. Sarò sempre pronto ad aiutarti, nonostante tutto...",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Nessuno li ha mai visti con una cordicella che tenesse legati i loro polsi, certe cose non si vedono, ma esistono.",
+        author: AuthorUtils.SARAMANGO
+    },
+    {
+        title: "",
+        poem: "Era necessario un addio, perché capissi, che non c'è un addio per noi.",
+        author: AuthorUtils.DIMITROVA
+    },
+    {
+        title: "l'arcobaleno nei tuoi occhi",
+        poem: "a volte mi domando se valga la pena lottare per un amore che la società condanna ma non riesco a immaginare la mia vita senza di te.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Mi chiedi parole. Ma il tempo precipita come un masso sulla mia anima che vuole certezze, e più non ha sillabe da offrire se non quelle silenziose del sangue legate al tuo nome, o mia vita, mio amore senza fine.",
+        author: AuthorUtils.QUASIMODO
+    },
+    {
+        title: "",
+        poem: "Le cose si ottengono quando non si desiderano più.",
+        author: AuthorUtils.CESARE_PAVESE
+    },
+    {
+        title: "",
+        poem: "Non rivangare quello che non può servire ad altro che a inquietarti inutilmente.",
+        author: AuthorUtils.MANZONI
+    },
+    {
+        title: "",
+        poem: "Mai discutere con un idiota, ti porta al suo livello e ti batte con l'esperienza.",
+        author: AuthorUtils.WILDE
+    },
+    {
+        title: "",
+        poem: "Stare con te o stare senza di te è l'unico modo che ho per misurare il tempo.",
+        author: AuthorUtils.BORGES
+    },
+    {
+        title: "L'Eco di quello che eri",
+        poem: "Non voglio fare a meno di te, nemmeno per un istante. Ci incontrammo in una giornata normale, e tu l'hai trasformata in una vita importante.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Più mondo ho visto, meno mi sono costruito a suo gusto.",
+        author: AuthorUtils.ROUSSEAU
+    },
+    {
+        title: "",
+        poem: "Hai disegnato ricordi nella mia mente. Non potrei mai cancellarli. Hai dipinto colori nel mio cuore. Non potrei mai sostituirlo.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Per essere felici bisognerebbe vivere. Ma vivere è la cosa più rara al mondo. La maggior parte della gente esiste, e nulla più.",
+        author: AuthorUtils.WILDE
+    },
+    {
+        title: "",
+        poem: "E se potessi prendere tutto il dolore dal tuo cuore e metterlo nel mio, lo farei.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Non vedo te nella Luna e nelle stelle, questo è cio che vedono i sognatori; Io vedo il tuo riflesso nei miei occhi, E ogni piccola cosa che faccio... Sei la mia realtà.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Mi accusate di avere dei vizi, di essere dissoluto, immorale, mentre io forse sono colpevole solo di essere più sincero degli altri e basta; di non nascondere ciò che gli altri nascondono persino a sé stessi.",
+        author: AuthorUtils.DOSTOEVSKIJ
+    },
+    {
+        title: "",
+        poem: "Chi combatte contro i mostri deve guardarsi dal non diventare egli stesso un mostro. Se guarderai a lungo in un abisso, anche l'abisso vorrà guardare dentro di te.",
+        author: AuthorUtils.NIETZSCHE
+    },
+    {
+        title: "",
+        poem: "Non lasciatevi ingannare dalla nostalgia di \"quel che poteva essere\". Non poteva essere nient'altro, altrimenti lo sarebbe stato.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Per chi vuole vederli, ci sono fiori dappertutto.",
+        author: AuthorUtils.MATISSE
+    },
+    {
+        title: "",
+        poem: "E' meglio tenere la bocca chiusa e lasciare che le persone pensino che sei uno sciocco piuttosto che aprirla e togliere ogni dubbio.",
+        author: AuthorUtils.TWAIN
+    },
+    {
+        title: "",
+        poem: "L'impossibile è per chi non vuole.",
+        author: AuthorUtils.KEATS
+    },
+    {
+        title: "",
+        poem: "Paradossalmente, la capacità di stare soli è la condizione prima per la capacità d'amare.",
+        author: AuthorUtils.FROMM
+    },
+    {
+        title: "",
+        poem: "Visto che io non costringo nessuno, così non voglio essere costretto io stesso; io che rispetto la libertà altrui insisto sulla mia libertà.",
+        author: AuthorUtils.VAN_GOGH
+    },
+    {
+        title: "",
+        poem: "Quando una porta si chiude, un'altra si apre. Ma spesso guardiamo così a lungo e con tato rimpianto la porta chiusa che non vediamo quella che si è aperta per noi.",
+        author: AuthorUtils.BELL
+    },
+    {
+        title: "",
+        poem: "Ti manderò un bacio con il vento e so che lo sentirai, ti volterai senza vedermi ma io sarò lì.",
+        author: AuthorUtils.NERUDA
+    },
+    {
+        title: "",
+        poem: "Quanto più lo spirito diventa gioioso e sicuro, tanto più l'uomo disimpara a ridere forte; per contro gli zampilla continuamente in viso un sorriso intelligente.",
+        author: AuthorUtils.NIETZSCHE
+    },
 ]
 
 export const getRandomizedPoems = () => {
