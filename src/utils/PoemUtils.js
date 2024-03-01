@@ -384,7 +384,7 @@ export const poems = [
     },
     {
         title: "",
-        poem: "Quando una porta si chiude, un'altra si apre. Ma spesso guardiamo così a lungo e con tato rimpianto la porta chiusa che non vediamo quella che si è aperta per noi.",
+        poem: "Quando una porta si chiude, un'altra si apre. Ma spesso guardiamo così a lungo e con tanto rimpianto la porta chiusa che non vediamo quella che si è aperta per noi.",
         author: AuthorUtils.BELL
     },
     {
