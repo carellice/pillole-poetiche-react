@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, IconButton, Paper, Snackbar, Typography, useMediaQuery } from '@mui/material';
+import { Grid, IconButton, Paper, Typography, useMediaQuery } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import * as PoemUtils from "./../utils/PoemUtils";

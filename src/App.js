@@ -2,13 +2,7 @@ import { useState } from 'react';
 import React from 'react';
 import './App.css';
 import {
-  autocompleteClasses,
-  Box,
-  Button,
   IconButton,
-  InputAdornment,
-  OutlinedInput,
-  Snackbar,
   Typography
 } from '@mui/material';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
@@ -20,8 +14,6 @@ import * as PoemUtils from "./utils/PoemUtils";
 import AuthorList from './components/AuthorList';
 import AuthorDialog from './components/AuthorDialog';
 import RefreshIcon from '@mui/icons-material/Refresh';
-import BackspaceIcon from '@mui/icons-material/Backspace';
-import SearchIcon from '@mui/icons-material/Search';
 import SearchBar from "./components/SearchBar";
 
 
@@ -72,7 +64,7 @@ function App() {
         <ResponsiveAppBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
         <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '100px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
-          Poesia casuale <IconButton onClick={handleRefreshClick} aria-label="refresh"><RefreshIcon style={{ transition: 'transform 0.3s ease', transform: `rotate(${rotationDegrees}deg)` }} /></IconButton>
+          Poesia casuale <IconButton onClick={handleRefreshClick} aria-label="refresh"><RefreshIcon style={{ transition: 'transform 0.5s ease', transform: `rotate(${rotationDegrees}deg)` }} /></IconButton>
         </Typography>
         <PoemCard author={randomPoem.author} poem={randomPoem.poem} title={randomPoem.title} />
       

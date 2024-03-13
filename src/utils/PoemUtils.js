@@ -397,6 +397,161 @@ export const poems = [
         poem: "Quanto più lo spirito diventa gioioso e sicuro, tanto più l'uomo disimpara a ridere forte; per contro gli zampilla continuamente in viso un sorriso intelligente.",
         author: AuthorUtils.NIETZSCHE
     },
+    {
+        title: "",
+        poem: "Il forse è la parola più bella del vocabolario italiano, perchè apre delle possibilità, non certezze... Perchè none cerca la fine, ma va verso l'infinito.",
+        author: AuthorUtils.LEOPARDI
+    },
+    {
+        title: "",
+        poem: "Più un uomo appare perfetto all'esterno, più demoni ha all'interno.",
+        author: AuthorUtils.SIGMUND_FREUD
+    },
+    {
+        title: "",
+        poem: "",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Non ami qualcuno per il suo aspetto, i suoi vestiti o per la sua macchina da sogno, ma perchè canta una canzone che solo tu puoi sentire.",
+        author: AuthorUtils.WILDE
+    },
+    {
+        title: "",
+        poem: "Se oggi non valgo nulla, non varrò nulla nemmeno domani. Ma se domani scoprono in me dei valori, vuole dire che li posseggo anche oggi. Poichè il grano è grano, anche se la gente dapprima lo prende per erba.",
+        author: AuthorUtils.VAN_GOGH
+    },
+    {
+        title: "",
+        poem: "Un momento di pazienza in un momento di rabbia può salvare migliaia di momenti di rimpianti.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Prenderte la vita con leggerezza, che leggerezza non è superficialità, ma planare sulle cose dall'alto, non avere macigni sul cuore.",
+        author: AuthorUtils.CALVINO
+    },
+    {
+        title: "",
+        poem: "Amami quando lo merito meno, perchè sarà quando ne avrò più bisogno.",
+        author: AuthorUtils.CATULLO
+    },
+    {
+        title: "",
+        poem: "Non tutte le temepeste arrivano per distruggerti la vita. Alcune arrivano per pulire il tuo cammino.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Le nostre paure sono molto più numerose dei pericoli concreti che corriamo. Soffriamo molto di più per la nostra immaginazione che per la realtà.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Per essere felici bisogna eliminare due cose: il timore di un male futuro e il ricordo di un male passato.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "E' gradevole stare con sè stessi il più a lungo possibile, se uno si è reso degno di essere di per sè soggetto di gioia.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Con tre metodi possiamo imparare la saggezza: pirmo, mediante la riflessione, che è la più nobile; secondo, per imitazione, che è più facile; e terzo per esperienza che è più amara.",
+        author: AuthorUtils.CONFUCIO
+    },
+    {
+        title: "",
+        poem: "La struttura alare del calabrone, in relazione al suo peso, non è adatta al volo, ma lui non lo sa e vola lo stesso.",
+        author: AuthorUtils.EINSTEIN
+    },
+    {
+        title: "",
+        poem: "Ho notato che anche le persone che affermano che tutto è già scritto e che non possiamo far nulla per cambiare il destino guardano a destra e a sinistra prima di attraversare la strada.",
+        author: AuthorUtils.HAWKING
+    },
+    {
+        title: "",
+        poem: "Ogni volta che due persone si incontrano, ci sono sei persone presenti: come ogni persona vede se stessa, come una persona vede l'altra e ogni persona come realmente è.",
+        author: AuthorUtils.JAMES
+    },
+    {
+        title: "",
+        poem: "C'è una crepa in ogni cosa ed è da lì che entra la luce.",
+        author: AuthorUtils.COHEN
+    },
+    {
+        title: "",
+        poem: "Quando i 'vorrei' diventano 'voglio', quando i 'dovrei' diventano 'devo', quando i 'prima o poi' diventano 'adesso', allora e solo allora i desideri iniziano a trasformarsi in realtà.",
+        author: AuthorUtils.ROBBINS
+    },
+    {
+        title: "",
+        poem: "La vita non è misurata dal numero di respiri che prendiamo, ma dai momenti che ci lasciano senza fiato.",
+        author: AuthorUtils.ANGELOU
+    },
+    {
+        title: "",
+        poem: "E' una malattia. La gente ha smesso di pensare, di provare emozioni, di interessarsi alle cose; nessuno che si appassioni o creda in qualcosa che non sia la sua piccola, dannata, comoda mediocrità.",
+        author: AuthorUtils.YATES
+    },
+    {
+        title: "",
+        poem: "La conoscenza parla, ma la saggezza ascolta. Il vero apprendimento va oltre l'accumulo di informazioni, coinvolgendo una comprensione profonda e riflessiva.",
+        author: AuthorUtils.HENDRIX
+    },
+    {
+        title: "",
+        poem: "Sopporta e resisti, un giorno questo dolore ti sarà utile.",
+        author: AuthorUtils.OVIDIO
+    },
+    {
+        title: "",
+        poem: "Se vuoi costruire una barca, non radunare uomini per tagliare legna, dividere i compiti e impartire ordini, ma insegna loro la nostalgia per il mare vasto e infinito.",
+        author: AuthorUtils.EXUPERY
+    },
+    {
+        title: "",
+        poem: "Secondo la mitologia greca, gli umani originariamente furono creati con quattro braccia, quattro gambe e una testa con due facce. Temendo il loro potere, Zeus li divise in due parti separate, condannandoli a trascorrere le loro vite a cercare l'altra loro metà.",
+        author: AuthorUtils.PLATONE
+    },
+    {
+        title: "",
+        poem: "Tu sei quello che fai, non quello che dici che farai.",
+        author: AuthorUtils.JUNG
+    },
+    {
+        title: "",
+        poem: "E la fedeltà tra due persone che si amano... Ma che cos'è? Fedeltà vuol dire che qualsiasi cosa accada nella tua vita o nella mia. Io comunque ti sarò sempre vicino. Sarò sempre con te, io ci sarò.",
+        author: AuthorUtils.BENIGNI
+    },
+    {
+        title: "",
+        poem: "Non vedrei ora così bello, se già non avessi veduto così nero.",
+        author: AuthorUtils.PASCOLI
+    },
+    {
+        title: "",
+        poem: "Questo è ciò che significa fidarsi. Si tratta di dare a qualcun altro il potere su di te. Il potere di ferirti.",
+        author: AuthorUtils.SANDERSON
+    },
+    {
+        title: "",
+        poem: "Coloro che sono capaci di vedere al di là delle ombre e delle menzogne della propria cultura non saranno mai compresi, figuriamoci creduti, dalle masse.",
+        author: AuthorUtils.PLATONE
+    },
+    {
+        title: "",
+        poem: "Non ti amo con il cuore e con la mente. Ti amo con l'anima, nel caso in cui la mia mente dimentichi e il mio cuore si fermi.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Certo che ti farò del male. Certo che me ne farai. Certo che ce ne faremo. Ma questa è la condizione stessa dell'esistenza. Farsi primavera, significa accettare il rischio dell'inverno. Farsi presenza, significa accettare il rischio dell'assenza.",
+        author: AuthorUtils.PICCOLO_PRINCIPE
+    },
 ]
 
 export const getRandomizedPoems = () => {

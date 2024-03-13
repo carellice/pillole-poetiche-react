@@ -1,15 +1,10 @@
 // AuthorDialog.js
-import React, { useState } from 'react';
-import { Dialog, DialogTitle, Accordion, AccordionSummary, AccordionDetails, Typography, IconButton } from '@mui/material';
+import React from 'react';
+import { Dialog, DialogTitle, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import PoemCard from './PoemCard';
 
 const AuthorDialog = ({ open, onClose, author, poems }) => {
-  const [expandedAccordion, setExpandedAccordion] = useState(null);
-
-  const handleAccordionChange = (panel) => (event, isExpanded) => {
-    setExpandedAccordion(isExpanded ? panel : null);
-  };
 
   return (
     <Dialog fullScreen open={open} onClose={onClose}>
