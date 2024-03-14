@@ -409,11 +409,6 @@ export const poems = [
     },
     {
         title: "",
-        poem: "",
-        author: AuthorUtils.ANONIMO
-    },
-    {
-        title: "",
         poem: "Non ami qualcuno per il suo aspetto, i suoi vestiti o per la sua macchina da sogno, ma perchè canta una canzone che solo tu puoi sentire.",
         author: AuthorUtils.WILDE
     },
