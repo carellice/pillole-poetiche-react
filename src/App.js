@@ -22,6 +22,12 @@ function App() {
     palette: {
       mode: 'dark',
     },
+    typography: {
+      fontFamily: [
+        'Google Sans', // Aggiungi 'Google Sans' come primo font della lista
+        'sans-serif', // Aggiungi altri fallback di font qui se necessario
+      ].join(','),
+    },
   });
 
   const [selectedPage, setSelectedPage] = useState("HomePage");
@@ -63,25 +69,25 @@ function App() {
         <CssBaseline />
         <ResponsiveAppBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '100px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
+        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '100px', marginBottom: '20px' }}>
           Poesia casuale <IconButton onClick={handleRefreshClick} aria-label="refresh"><RefreshIcon style={{ transition: 'transform 0.5s ease', transform: `rotate(${rotationDegrees}deg)` }} /></IconButton>
         </Typography>
         <PoemCard author={randomPoem.author} poem={randomPoem.poem} title={randomPoem.title} />
       
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
+        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px' }}>
           Scorri le poesie
         </Typography>
         <PoemCarousel poems={poems}/>
 
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
+        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px' }}>
           Poesie per autore
         </Typography>
         {/*BARRA DI RICERCA*/}
         <SearchBar searchValue={searchValue} handleRicerca={handleRicerca} centered={true}/>
         {authors.length !== 0 ? <AuthorList authors={authors} onAuthorClick={handleAuthorClick}/> : <></>}
-        {authors.length === 0 ? <Typography variant="subtitle1" style={{ color: '#c50000', textAlign: 'center', marginTop: '20px', marginBottom: '20px', fontFamily: 'Pacifico' }}>Nessun risultato!</Typography> : <></>}
+        {authors.length === 0 ? <Typography variant="subtitle1" style={{ color: '#c50000', textAlign: 'center', marginTop: '20px', marginBottom: '20px' }}>Nessun risultato!</Typography> : <></>}
 
-        <Typography variant="h6" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px', fontFamily: 'Pacifico' }}>
+        <Typography variant="h6" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px' }}>
           Creato da F.C. per Chiara C. ❤️
         </Typography>
 
