@@ -1,6 +1,6 @@
 // AuthorDialog.js
 import React from 'react';
-import { Dialog, DialogTitle, IconButton } from '@mui/material';
+import {Box, Dialog, DialogTitle, IconButton} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import PoemCard from './PoemCard';
 
@@ -24,7 +24,10 @@ const AuthorDialog = ({ open, onClose, author, poems }) => {
         //     <Typography>{poem.poem}</Typography>
         //   </AccordionDetails>
         // </Accordion>
-        <PoemCard author={poem.author} poem={poem.poem} title={poem.title}/>
+          <>
+            <PoemCard author={poem.author} poem={poem.poem} title={poem.title}/>
+            <Box style={{marginTop:70}}/>
+          </>
       ))}
     </Dialog>
   );

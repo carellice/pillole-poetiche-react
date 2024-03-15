@@ -40,14 +40,14 @@ const PoemCard = ({ title, poem, author }) => {
       }}
     >
       {title && (
-        <Typography variant="h3" gutterBottom style={{ color: 'black', fontFamily: 'Caveat' }}>
+        <Typography variant="h3" gutterBottom style={{ color: 'black' }}>
           {title}
         </Typography>
       )}
-      <Typography variant="body1" paragraph style={{ color: 'black', fontFamily: 'Caveat', fontSize: '1.5rem' }}>
+      <Typography variant="body1" paragraph style={{ color: 'black', fontSize: '1.5rem' }}>
         {poem}
       </Typography>
-      <Typography variant="caption" style={{ fontFamily: 'Caveat', fontSize: '1.2rem', color: 'black' }}>
+      <Typography variant="caption" style={{ fontSize: '1.2rem', color: 'black' }}>
         - {author}
       </Typography>
       <Grid container justifyContent="flex-end">
