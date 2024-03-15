@@ -399,7 +399,7 @@ export const poems = [
     },
     {
         title: "",
-        poem: "Il forse è la parola più bella del vocabolario italiano, perchè apre delle possibilità, non certezze... Perchè none cerca la fine, ma va verso l'infinito.",
+        poem: "Il forse è la parola più bella del vocabolario italiano. Perché apre delle possibilità, non certezze. Perché non cerca la fine, ma va verso l'infinito.",
         author: AuthorUtils.LEOPARDI
     },
     {
@@ -546,6 +546,11 @@ export const poems = [
         title: "",
         poem: "Certo che ti farò del male. Certo che me ne farai. Certo che ce ne faremo. Ma questa è la condizione stessa dell'esistenza. Farsi primavera, significa accettare il rischio dell'inverno. Farsi presenza, significa accettare il rischio dell'assenza.",
         author: AuthorUtils.PICCOLO_PRINCIPE
+    },
+    {
+        title: "",
+        poem: "Chi ha naufragato trema anche di fronte ad acque tranquille.",
+        author: AuthorUtils.OVIDIO
     },
 ]
 
