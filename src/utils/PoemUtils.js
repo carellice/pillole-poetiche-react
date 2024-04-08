@@ -552,6 +552,41 @@ export const poems = [
         poem: "Chi ha naufragato trema anche di fronte ad acque tranquille.",
         author: AuthorUtils.OVIDIO
     },
+    {
+        title: "",
+        poem: "Chi da luce, Rischia buio.",
+        author: AuthorUtils.EUGENIO_MONTALE
+    },
+    {
+        title: "",
+        poem: "Sei il mio \"niente\" quando la gente mi incontra Con lo sguardo perduto e mi chiede: a cosa stai pensando?",
+        author: AuthorUtils.NERUDA
+    },
+    {
+        title: "",
+        poem: "Ho visto persone a pezzi aiutare chi aveva solo una crepa.",
+        author: AuthorUtils.CHARLES_BUKOWSKI
+    },
+    {
+        title: "",
+        poem: "E' inutile che vivi fuoir se muori dentro.",
+        author: AuthorUtils.ZEROCALCARE
+    },
+    {
+        title: "",
+        poem: "E ricordati che cercare e pensare sono due cose diverse. Ed io ti penso ma non ti cerco.",
+        author: AuthorUtils.CHARLES_BUKOWSKI
+    },
+    {
+        title: "",
+        poem: "Brilla amore mio, brilla, voglio vederti brillare e raggiungere tutti gli obiettivi che secondo te meritano di essere raggiunti per tuo volere e non per volere di altri. Sarò sempre qui a tifare per te.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "La fortuna non esiste. Esiste il momento in cui il talento incontra l'occasione.",
+        author: AuthorUtils.SENECA
+    },
 ]
 
 export const getRandomizedPoems = () => {
