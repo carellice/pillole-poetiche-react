@@ -587,6 +587,21 @@ export const poems = [
         poem: "La fortuna non esiste. Esiste il momento in cui il talento incontra l'occasione.",
         author: AuthorUtils.SENECA
     },
+    {
+        title: "",
+        poem: "Un giorno tu ti sveglierai e vedrai una bella giornata. Ci sarà il sole, e tutto sarà nuovo, cambiato, limpido. Quello che prima ti sembrava impossibile diventerà semplice, normale. Non ci credi? Io sono sicuro. E presto. Anche domani.",
+        author: AuthorUtils.DOSTOEVSKIJ
+    },
+    {
+        title: "",
+        poem: "Date una compagnia al solitario e parlerà più di chiunque.",
+        author: AuthorUtils.CESARE_PAVESE
+    },
+    {
+        title: "",
+        poem: "Con te sono sdolcinato, romantico, buffo e infantile. Non è che io sia così, è che ti sei guadagnata quella parte di me. Ti amo.",
+        author: AuthorUtils.ANONIMO
+    },
 ]
 
 export const getRandomizedPoems = () => {
