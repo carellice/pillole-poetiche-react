@@ -602,6 +602,71 @@ export const poems = [
         poem: "Con te sono sdolcinato, romantico, buffo e infantile. Non è che io sia così, è che ti sei guadagnata quella parte di me. Ti amo.",
         author: AuthorUtils.ANONIMO
     },
+    {
+        title: "",
+        poem: "Imparerai a tue spese che nel lungo tragitto della vita incontrerai tante maschere e pochi volti.",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "Non c'è più pazzo al mondo di chi crede d'aver ragione.",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "Hai mai pensato di andare via e non tornare mai più? Scappare e far perdere ogni tua traccia, per andare in un posto lontano e ricominciare a vivere, vivere una vita nuova, solo tua,vivere davvero. Ci hai mai pensato?",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "Prima di giudicare la mia vita o il mio carattere, mettiti le mie scarpe, percorri il cammino che ho percorso io. Vivi i miei dolori, i miei dubbi, le mie risate. Vivi gli anni che ho vissuto io e cadi là dove sono caduto io e rialzati come ho fatto io. Ognuno ha la propria storia. E solo allora mi potrai giudicare.",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "Gli occhi sono lo specchio dell'anima, cela i tuoi se non vuoi che ne scopra i segreti.",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "C'è una maschera per la famiglia, una per la società, una per il lavoro. E quando stai solo, resti nessuno.",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "Abbiamo tutti dentro un mondo di cose: ciascuno un suo mondo di cose! E come possiamo intenderci, signore, se nelle parole ch'io dico metto il senso e il valore delle cose come sono dentro di me; mentre chi le ascolta, inevitabilmente le assume col senso e col valore che hanno per sé, del mondo com'egli l'ha dentro? Crediamo di intenderci; non ci intendiamo mai!",
+        author: AuthorUtils.LUIGI_PIRANDELLO
+    },
+    {
+        title: "",
+        poem: "Il maggior ostacolo del vivere è l'attesa, che dipende dal domani ma spreca l'oggi.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Mi chiedi qual è stato il mio progresso? Ho cominciato a essere amico di me stesso.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Per essere felici bisogna eliminare due cose: il timore di un male futuro e il ricordo di un male passato.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Chi aumenta il sapere, aumenta il dolore.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "Lieve è il dolore che parla, il grande dolore è muto.",
+        author: AuthorUtils.SENECA
+    },
+    {
+        title: "",
+        poem: "La fortuna non esiste: esiste il momento in cui il talento incontra l'opportunità.",
+        author: AuthorUtils.SENECA
+    },
 ]
 
 export const getRandomizedPoems = () => {
