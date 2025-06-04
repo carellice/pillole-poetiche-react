@@ -1,4 +1,5 @@
 export const CESARE_PAVESE = 'Cesare Pavese';
+export const ZEROCALCARE = 'Zero Calcare';
 export const OLIVIA_S = 'Olivia S.';
 export const ANONIMO = 'Anonimo';
 export const HANNA_J_ROSE = 'Hanna J. Rose';
