@@ -1,99 +1,129 @@
-import { useState } from 'react';
-import React from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import './App.css';
-import {
-  IconButton,
-  Typography
-} from '@mui/material';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import BottomNav from './components/BottomNav';
 import PoemCard from './components/PoemCard';
-import PoemCarousel from './components/PoemCarousel';
-import * as PoemUtils from "./utils/PoemUtils";
+import PoemExplorer from './components/PoemExplorer';
 import AuthorList from './components/AuthorList';
 import AuthorDialog from './components/AuthorDialog';
+import SearchBar from './components/SearchBar';
 import RefreshIcon from '@mui/icons-material/Refresh';
-import SearchBar from "./components/SearchBar";
+import * as PoemUtils from './utils/PoemUtils';
 
+const allAuthors = PoemUtils.getUniqueAuthors();
+const shuffledPoems = PoemUtils.getRandomizedPoems();
 
 function App() {
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-    typography: {
-      fontFamily: [
-        'Google Sans', // Aggiungi 'Google Sans' come primo font della lista
-        'sans-serif', // Aggiungi altri fallback di font qui se necessario
-      ].join(','),
-    },
-  });
-
-  const [selectedPage, setSelectedPage] = useState("HomePage");
-  const [randomPoem, setRandomPoem] = useState(PoemUtils.getRandomPoem());
-  const [poems, setPoems] = useState(PoemUtils.getRandomizedPoems());
-  const [authors, setAuthors] = useState(PoemUtils.getUniqueAuthors());
+  const [activeTab, setActiveTab] = useState('home');
+  const [randomPoem, setRandomPoem] = useState(() => PoemUtils.getRandomPoem());
+  const [poemKey, setPoemKey] = useState(0);
+  const [rotationDegrees, setRotationDegrees] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedAuthor, setSelectedAuthor] = useState(null);
-  const [rotationDegrees, setRotationDegrees] = useState(0);
-  const [searchValue, setSearchValue] = useState("");
-  const handleAuthorClick = (author) => {
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleTabChange = useCallback((tab) => {
+    setActiveTab(tab);
+  }, []);
+
+  const handleRefreshClick = useCallback(() => {
+    setRandomPoem(PoemUtils.getRandomPoem());
+    setRotationDegrees((prev) => prev + 360);
+    setPoemKey((prev) => prev + 1);
+  }, []);
+
+  const filteredAuthors = useMemo(() => {
+    if (!searchValue) return allAuthors;
+    return allAuthors.filter((a) =>
+      a.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }, [searchValue]);
+
+  const handleRicerca = useCallback((event) => {
+    setSearchValue(event === null ? '' : event.target.value);
+  }, []);
+
+  const handleAuthorClick = useCallback((author) => {
     setSelectedAuthor(author);
     setDialogOpen(true);
-  };
+  }, []);
 
-  const handleDialogClose = () => {
+  const handleDialogClose = useCallback(() => {
     setDialogOpen(false);
-  };
+  }, []);
 
-  const handleRefreshClick = () => {
-    setRandomPoem(PoemUtils.getRandomPoem());
-    setRotationDegrees(rotationDegrees + 360); // Aggiungiamo 360 gradi ad ogni clic
-  };
+  const authorPoems = useMemo(
+    () => (selectedAuthor ? PoemUtils.getPoemsByAuthor(selectedAuthor) : []),
+    [selectedAuthor]
+  );
 
-  const handleRicerca = (event) => {
-    const newSearch = event === null ? "" : event.target.value;
-    setSearchValue(newSearch);
-    if(newSearch === ""){
-      setAuthors(PoemUtils.getUniqueAuthors());
-    }else{
-      const newAuthors = authors.filter(a => a.toLowerCase().includes(newSearch.toLowerCase()));
-      setAuthors(newAuthors);
-    }
-  };
-  
   return (
-    <>
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        <ResponsiveAppBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+    <div className="app">
+      <ResponsiveAppBar />
 
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '100px', marginBottom: '20px' }}>
-          Poesia casuale <IconButton onClick={handleRefreshClick} aria-label="refresh"><RefreshIcon style={{ transition: 'transform 0.5s ease', transform: `rotate(${rotationDegrees}deg)` }} /></IconButton>
-        </Typography>
-        <PoemCard author={randomPoem.author} poem={randomPoem.poem} title={randomPoem.title} />
-      
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px' }}>
-          Scorri le poesie
-        </Typography>
-        <PoemCarousel poems={poems}/>
+      <main className="app-content">
+        {activeTab === 'home' && (
+          <div className="tab-panel">
+            <div className="home-tab">
+              <div className="home-subtitle">La tua pillola del giorno</div>
+              <div className="home-poem-wrapper" key={poemKey}>
+                <PoemCard
+                  author={randomPoem.author}
+                  poem={randomPoem.poem}
+                  title={randomPoem.title}
+                />
+              </div>
+              <button
+                className="refresh-btn"
+                onClick={handleRefreshClick}
+                aria-label="Nuova poesia"
+              >
+                <RefreshIcon
+                  style={{
+                    transform: `rotate(${rotationDegrees}deg)`,
+                    transition: 'transform 0.5s ease',
+                  }}
+                />
+              </button>
+            </div>
+          </div>
+        )}
 
-        <Typography variant="h4" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px' }}>
-          Poesie per autore
-        </Typography>
-        {/*BARRA DI RICERCA*/}
-        <SearchBar searchValue={searchValue} handleRicerca={handleRicerca} centered={true}/>
-        {authors.length !== 0 ? <AuthorList authors={authors} onAuthorClick={handleAuthorClick}/> : <></>}
-        {authors.length === 0 ? <Typography variant="subtitle1" style={{ color: '#c50000', textAlign: 'center', marginTop: '20px', marginBottom: '20px' }}>Nessun risultato!</Typography> : <></>}
+        {activeTab === 'esplora' && (
+          <div className="tab-panel">
+            <PoemExplorer poems={shuffledPoems} />
+          </div>
+        )}
 
-        <Typography variant="h6" style={{ color: 'white', textAlign: 'center', marginTop: '60px', marginBottom: '20px' }}>
-          Creato da F.C. per Chiara C. ❤️
-        </Typography>
+        {activeTab === 'autori' && (
+          <div className="tab-panel">
+            <div className="authors-tab">
+              <SearchBar
+                searchValue={searchValue}
+                handleRicerca={handleRicerca}
+              />
+              {filteredAuthors.length > 0 ? (
+                <AuthorList
+                  authors={filteredAuthors}
+                  onAuthorClick={handleAuthorClick}
+                />
+              ) : (
+                <div className="no-results">Nessun risultato</div>
+              )}
+            </div>
+          </div>
+        )}
+      </main>
 
-        <AuthorDialog open={dialogOpen} onClose={handleDialogClose} author={selectedAuthor} poems={PoemUtils.getPoemsByAuthor(selectedAuthor)} />
-      </ThemeProvider>
-    </>
+      <BottomNav activeTab={activeTab} onTabChange={handleTabChange} />
+
+      <AuthorDialog
+        open={dialogOpen}
+        onClose={handleDialogClose}
+        author={selectedAuthor}
+        poems={authorPoems}
+      />
+    </div>
   );
 }
 

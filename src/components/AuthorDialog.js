@@ -1,36 +1,66 @@
-// AuthorDialog.js
-import React from 'react';
-import {Box, Dialog, DialogTitle, IconButton} from '@mui/material';
+import React, { useState, useEffect, useCallback } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import PoemCard from './PoemCard';
 
 const AuthorDialog = ({ open, onClose, author, poems }) => {
+  const [closing, setClosing] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      setVisible(true);
+      setClosing(false);
+    }
+  }, [open]);
+
+  const handleClose = useCallback(() => {
+    setClosing(true);
+    setTimeout(() => {
+      setVisible(false);
+      setClosing(false);
+      onClose();
+    }, 280);
+  }, [onClose]);
+
+  const handleOverlayClick = useCallback((e) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  }, [handleClose]);
+
+  if (!visible) return null;
 
   return (
-    <Dialog fullScreen open={open} onClose={onClose}>
-      <DialogTitle>
-        {author}
-        <IconButton edge="end" color="inherit" onClick={onClose} aria-label="close" style={{ position: 'absolute', top: '8px', right: '22px' }}>
-          <CloseIcon />
-        </IconButton>
-      </DialogTitle>
-      {poems.map((poem, index) => (
-        // <Accordion key={index} expanded={expandedAccordion === `panel-${index}`} onChange={handleAccordionChange(`panel-${index}`)}>
-        // <Accordion key={index} expanded={true} onChange={handleAccordionChange(`panel-${index}`)}>
-        //   <AccordionSummary>
-        //     <Typography>{poem.title !== "" ? poem.title : 'Poesia ' + (index + 1)}</Typography>
-        //   </AccordionSummary>
-        //   <AccordionDetails>
-        //     <Typography>{poem.poem}</Typography>
-        //   </AccordionDetails>
-        // </Accordion>
-          <>
-            <PoemCard author={poem.author} poem={poem.poem} title={poem.title}/>
-            <Box style={{marginTop:70}}/>
-          </>
-      ))}
-    </Dialog>
+    <>
+      <div
+        className={`author-sheet-overlay${closing ? ' closing' : ''}`}
+        onClick={handleOverlayClick}
+      />
+      <div className={`author-sheet${closing ? ' closing' : ''}`}>
+        <div className="author-sheet-handle" />
+        <div className="author-sheet-header">
+          <span className="author-sheet-title">{author}</span>
+          <button
+            className="author-sheet-close"
+            onClick={handleClose}
+            aria-label="Chiudi"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+        <div className="author-sheet-content">
+          {poems.map((poem, index) => (
+            <PoemCard
+              key={index}
+              author={poem.author}
+              poem={poem.poem}
+              title={poem.title}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default AuthorDialog;

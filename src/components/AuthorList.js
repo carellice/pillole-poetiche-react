@@ -1,20 +1,35 @@
-// AuthorList.js
 import React from 'react';
-import { List, ListItem, ListItemText } from '@mui/material';
-import PersonIcon from '@mui/icons-material/Person';
-import * as PoemUtils from "./../utils/PoemUtils"
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import * as PoemUtils from "./../utils/PoemUtils";
 
-const AuthorList = ({ authors, onAuthorClick }) => {
+const AuthorList = React.memo(({ authors, onAuthorClick }) => {
   return (
-    <List style={{ maxWidth: "500px", margin: 'auto', backgroundColor: '#5b5b5c', padding: '10px' }}>
-      {authors.map((author, index) => (
-        <ListItem button key={index} onClick={() => onAuthorClick(author)}>
-          <PersonIcon style={{ marginRight: '8px' }} />
-          <ListItemText primary={author} secondary={PoemUtils.getNumberOfPoemsByAuthor(author)} />
-        </ListItem>
-      ))}
-    </List>
+    <div className="author-list">
+      {authors.map((author, index) => {
+        const count = PoemUtils.getNumberOfPoemsByAuthor(author);
+        return (
+          <button
+            key={index}
+            className="author-item"
+            onClick={() => onAuthorClick(author)}
+          >
+            <div className="author-avatar">
+              {author.charAt(0).toUpperCase()}
+            </div>
+            <div className="author-info">
+              <div className="author-name">{author}</div>
+              <div className="author-count">
+                {count} {count === 1 ? 'poesia' : 'poesie'}
+              </div>
+            </div>
+            <div className="author-arrow">
+              <ChevronRightIcon />
+            </div>
+          </button>
+        );
+      })}
+    </div>
   );
-}
+});
 
 export default AuthorList;
