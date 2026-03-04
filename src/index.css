@@ -75,15 +75,23 @@ body {
   border-radius: 4px;
 }
 
-/* Selection styling */
-::selection {
-  background: var(--accent-dim);
-  color: var(--accent);
-}
-
-/* Tap highlight removal for mobile */
+/* Tap highlight removal for mobile (Android blue flash) */
 * {
   -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow selection only in search input */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Remove focus outline on interactive elements (Android blue ring) */
+button:focus, a:focus, input:focus, [role="button"]:focus {
+  outline: none;
 }
 
 /* Smooth scrolling */
