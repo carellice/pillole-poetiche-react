@@ -2,11 +2,13 @@ import React from 'react';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import ExploreIcon from '@mui/icons-material/Explore';
 import PeopleIcon from '@mui/icons-material/People';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 const tabs = [
   { id: 'home', label: 'Home', icon: <AutoStoriesIcon /> },
   { id: 'esplora', label: 'Esplora', icon: <ExploreIcon /> },
   { id: 'autori', label: 'Autori', icon: <PeopleIcon /> },
+  { id: 'info', label: 'Info', icon: <InfoOutlinedIcon /> },
 ];
 
 const BottomNav = React.memo(({ activeTab, onTabChange }) => {

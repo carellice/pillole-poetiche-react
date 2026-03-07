@@ -113,6 +113,20 @@ function App() {
             </div>
           </div>
         )}
+
+        {activeTab === 'info' && (
+          <div className="tab-panel">
+            <div className="info-tab">
+              <div className="info-card">
+                <h2 className="info-title">Pillole Poetiche</h2>
+                <p className="info-text">
+                  Una raccolta di poesie da leggere ogni giorno, per riscoprire la bellezza delle parole.
+                </p>
+                <p className="info-credit">Creato da F.C. per C.C. ❤️</p>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
 
       <BottomNav activeTab={activeTab} onTabChange={handleTabChange} />
