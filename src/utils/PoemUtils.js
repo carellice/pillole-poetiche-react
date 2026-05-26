@@ -667,6 +667,61 @@ export const poems = [
         poem: "La fortuna non esiste: esiste il momento in cui il talento incontra l'opportunità.",
         author: AuthorUtils.SENECA
     },
+    {
+        title: "",
+        poem: "Ogni persona che incontri sta combattendo una battaglia di cui non sai null. Sii gentile. Sempre.",
+        author: AuthorUtils.ROBIN_WILLIAMS
+    },
+    {
+        title: "",
+        poem: "Il nemico più grande è la tua mente incontrollata.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Un giorno capirai che nessuno ti stava davvero guardando, e che avresti potuto fare tutto cio' che volevi. Spero solo che tu non lo scopra troppo tardi.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Immagina di leggere un libro senza la possibilità di tornare alla pagina precedente. Con quanta attenzione lo leggeresti? Questa è la vita.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Il talento colpisce un bersaglio che nessun altro puo' colpire; il genio colpisce un bersaglio che nessun altro puo' vedere.",
+        author: AuthorUtils.ARTHUR_SCHOPENHAUER
+    },
+    {
+        title: "",
+        poem: "Un giorno ti sveglierai e non ci sarà più tempo per fare le cose che hai sempre desiderato. Falle ora.",
+        author: AuthorUtils.PAULO_COELHO
+    },
+    {
+        title: "",
+        poem: "Il problema è che le persone vengono odiate quando sono autentiche, e vengono amate quando sono false.",
+        author: AuthorUtils.BOB_MARLEY
+    },
+    {
+        title: "",
+        poem: "All'uomo piace solo contare i propri guai; non calcola la sua felicità.",
+        author: AuthorUtils.DOSTOEVSKIJ
+    },
+    {
+        title: "",
+        poem: "La tua giornata normale è il sogno di qualcun altro, quindi sii grato ogni giorno.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Non dimenticare di guardarti intorno e apprezzare anche le cose che stanno andando per il verso giusto.",
+        author: AuthorUtils.ANONIMO
+    },
+    {
+        title: "",
+        poem: "Il senso della vita è semplicemente essere vivi. E' così chiaro, così ovvio e così semplice. Eppure, tutti corrono a destra e a manca in preda a un grande panico, come se fosse necessario.",
+        author: AuthorUtils.ALAN_WATTS
+    },
 ]
 
 export const getRandomizedPoems = () => {
